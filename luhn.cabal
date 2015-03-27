@@ -1,0 +1,41 @@
+name:                luhn
+version:             0.0.0.1
+synopsis:            Luhn algorithm code kata
+homepage:            https://github.com/stackbuilders/luhn
+description:
+  .
+  Implementing the Luhn algorithm in Haskell, for fun and practice.
+license:             MIT
+license-file:        LICENSE
+author:              Justin Leitgeb
+maintainer:          justin@stackbuilders.com
+copyright:           2015 Stack Builders Inc.
+category:            System
+build-type:          Simple
+cabal-version:       >=1.10
+bug-reports:         https://github.com/stackbuilders/luhn/issues
+
+library
+  exposed-modules:       Luhn
+  build-depends:         base >=4.5 && <4.8
+
+  hs-source-dirs:      src
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+test-suite luhn-test
+  type: exitcode-stdio-1.0
+  hs-source-dirs: spec, src
+  main-is: Spec.hs
+
+  build-depends:       base >=4.5 && <4.8
+
+                     , hspec
+
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+
+source-repository head
+  type:     git
+  location: git@github.com:stackbuilders/luhn.git
